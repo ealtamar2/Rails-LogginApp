@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="col-sm-6 col-md-3">
+      <h1>Welcome!</h1>
+      <p>empieza a trabajar con nosotros</p>
+    </div>
+
+    <div class="col-sm-6 col-md-3"
+<%= form_tag sessions_path do %>
+  <div class="input-group">
+  	<span class="label label-default"> <%= label_tag :username%></span>   
+    <%= text_field_tag :username, params[:username],  :class => "form-control"%>
+  </div>
+  <div class="input-group">
+   <span class="label label-default"><%= label_tag :password%></span>   
+   <%= password_field_tag :password,params[:password], :class => "form-control" %>
+  </div>
+
+  <div class="control checkbox">
+    <%= check_box_tag :remember_me, 1, params[:remember_me], :class=>"control checkbox" %>
+    <span class="checkbox-label"><%= label_tag :remember_me%></span>   
+  </div>
+  <div class="actions">
+    <%= submit_tag "Log in", :class=>"btn btn-default navbar-btn"%>
+  </div>
+<% end %>
+  </div>
+</div>
