@@ -12,6 +12,8 @@ def create
   end
 end
  
+
+ 
 def destroy
   logout
   redirect_to root_url, :notice => "Logged out!"
